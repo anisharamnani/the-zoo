@@ -1,0 +1,12 @@
+= form_for @zookeeper do |f|
+	.field
+		= f.label :name 
+		= f.text_area :name
+	.field
+		= f.label :quirk 
+		= f.text_area :quirk
+	.field 
+		= f.label :zoo_id
+		= f.number_field :zoo_id
+	.actions
+		= f.submit 'Save'

@@ -1,0 +1,18 @@
+%h1 Listing Zookeepers
+%table 
+	%tr 
+		%th Name 
+		%th Quirk
+		%th Zoo ID 
+
+	- @zookeepers.each do |zookeeper|
+		%tr 
+			%td= zookeeper.name
+			%td= zookeeper.quirk
+			%td= zookeeper.zoo_id
+			%td= link_to 'Show', zookeeper 
+			%td= link_to 'Edit', edit_zookeeper_path(zookeeper)
+			%td= link_to 'Destroy', zookeeper, :method => :delete, :data => {:confirm => 'Are you sure?'}
+
+%br
+= link_to 'New Post', new_zookeeper_path

@@ -1,0 +1,16 @@
+%h1 Listing Zoos
+%table 
+	%tr 
+		%th Title 
+		%th Place 
+
+	- @zoos.each do |zoo|
+		%tr 
+			%td= zoo.title 
+			%td= zoo.place
+			%td= link_to 'Show', zoo 
+			%td= link_to 'Edit', edit_zoo_path(zoo)
+			%td= link_to 'Destroy', zoo, :method => :delete, :data => {:confirm => 'Are you sure?'}
+
+%br
+= link_to 'New Post', new_zoo_path

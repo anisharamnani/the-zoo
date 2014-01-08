@@ -1,0 +1,9 @@
+= form_for @zoo do |f|
+	.field
+		= f.label :title 
+		= f.text_area :title 
+	.field 
+		= f.label :place 
+		= f.text_area :place
+	.actions
+		= f.submit 'Save'
